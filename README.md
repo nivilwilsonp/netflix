@@ -74,5 +74,5 @@ Feel free to fork the repository and submit pull requests. For major changes, pl
 
 This project is open source and available under the MIT License
 . 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 .
