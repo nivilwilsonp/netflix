@@ -1,6 +1,6 @@
 # Netflix Clone
 
-A Netflix-style web application built with **React** and **Vite**. This project demonstrates a modern front-end setup with responsive UI, routing, and API integration for movie/TV data.
+A Netflix-style web application built with **React** and **Vite**. This project demonstrates a modern front-end setup with responsive UI, routing, and API integration for movie/TV data.Built with React ⚛️ and JavaScript
 
 ---
 
