@@ -1,16 +1,78 @@
-# React + Vite
+# Netflix Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A Netflix-style web application built with **React** and **Vite**. This project demonstrates a modern front-end setup with responsive UI, routing, and API integration for movie/TV data.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+- Browse movies and TV shows with categories
+- Responsive design for desktop and mobile
+- Search functionality
+- React Router for navigation
+- Styled components and CSS modules for styling
+- Fetch data from movie API (e.g., TMDb)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React** – Front-end library
+- **Vite** – Fast development build tool
+- **JavaScript (ES6+)**
+- **CSS / SCSS** – Styling
+- Optional: **Axios** or **Fetch API** for API requests
+- Optional: **React Router** – Client-side routing
+
+---
+
+## Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/netflix.git
+   cd netflix
+
+2. **Install dependencies**
+
+npm install
+
+
+3. **Run the development server**
+
+npm run dev
+
+
+Open http://localhost:5173
+ in your browser.
+
+4.  **Usage**
+
+Navigate through categories and explore movies/shows
+
+Search for specific titles
+
+Click on a movie/show to see more details (if API integration implemented)
+
+5. **Folder Structure**
+netflix/
+├─ public/          # Static assets
+├─ src/
+│  ├─ components/   # Reusable components
+│  ├─ pages/        # Different pages/routes
+│  ├─ assets/       # Images, icons, etc.
+│  ├─ App.jsx
+│  └─ main.jsx
+├─ package.json
+└─ README.md
+
+6. **Contributing**
+
+Feel free to fork the repository and submit pull requests. For major changes, please open an issue first.
+
+7. **License**
+
+This project is open source and available under the MIT License
+. 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+.
