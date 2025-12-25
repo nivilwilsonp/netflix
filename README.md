@@ -34,13 +34,13 @@ A Netflix-style web application built with **React** and **Vite**. This project 
    cd netflix
 
 2. **Install dependencies**
-
-npm install
+    ```bash
+    npm install
 
 
 3. **Run the development server**
-
-npm run dev
+    ```bash
+     npm run dev
 
 
 Open http://localhost:5173
