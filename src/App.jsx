@@ -1,12 +1,20 @@
 import { useState } from 'react'
 import './App.css'
+import NavBar from './components/NavBar/NavBar'
+import axios from 'axios'
+import Poster from './components/Poster/Poster'
+
+
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <h1>Hello world</h1>
+    <NavBar></NavBar>
+  <Poster></Poster>
+  
+     
     </>
   )
 }

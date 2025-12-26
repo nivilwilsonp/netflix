@@ -1,0 +1,10 @@
+const baseURL = "https://api.themoviedb.org/3";
+const imageBaseURL = "https://image.tmdb.org/t/p/original/";
+const trendingEndpoint = "/trending/all/week";
+const actionEndpoint = "/discover/movie?with_genres=28";
+const comedyEndpoint = "/discover/movie?with_genres=35";
+const horrorEndpoint = "/discover/movie?with_genres=27";
+const romanceEndpoint = "/discover/movie?with_genres=10749";
+const documentaryEndpoint = "/discover/movie?with_genres=99";
+const genresEndpoint = "/genre/movie/list";
+export { baseURL , imageBaseURL , trendingEndpoint , actionEndpoint , comedyEndpoint , horrorEndpoint , romanceEndpoint , documentaryEndpoint , genresEndpoint  };
