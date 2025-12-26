@@ -1,0 +1,48 @@
+.poster{
+    width:100%;
+    height:720px;
+    background-size: cover;
+ 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  
+}
+
+.poster-title {
+font-size: 5rem;
+ padding: 300px 0 0 50px;
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 800;
+}
+
+.poster-description {
+  font-size: 1.3rem;
+  padding: 10px 0 0 50px;
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 200;
+}
+
+.poster-button {
+    height: 50px;
+    width: 150px;
+    text-align: center;
+    font-size: 1.3rem;
+  
+  font-family: oswald, sans-serif;
+  font-weight: 400;
+  margin-right: 10px;
+  
+  margin-top: 10px;
+  background-color: white;
+  border-color: rgb(232, 243, 252);
+  border-radius: 5px;
+
+}
+
+.poster-buttons {
+    padding: 10px 0 0 50px;
+    display: flex;
+    flex-direction: row;
+}

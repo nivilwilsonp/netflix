@@ -1,8 +1,9 @@
 import { useState } from 'react'
+import { Routes, Route } from "react-router-dom";
 import './App.css'
 import NavBar from './components/NavBar/NavBar'
-import axios from 'axios'
-import Poster from './components/Poster/Poster'
+import Home from './components/Home/Home';
+import Shows from './components/Shows/Shows';
 
 
 
@@ -12,7 +13,11 @@ function App() {
   return (
     <>
     <NavBar></NavBar>
-  <Poster></Poster>
+    <Routes>
+        <Route path="/" element={<Home></Home>} />
+        <Route path="/shows" element={<Shows></Shows>} />
+      </Routes>
+  
   
      
     </>

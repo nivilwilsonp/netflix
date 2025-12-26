@@ -1,31 +1,24 @@
-import React, { use } from 'react'
-import axios from 'axios';
-import { useState } from 'react';
+import React from 'react';
+import "./Poster.css";
+import axios from '../Axios';
+import "@fontsource/oswald/700.css";
+import "@fontsource/oswald/400.css";
 
-function Poster() {
-
-  
-
-const year = new Date().getFullYear();
-
-
-
-
-
-
-
-
-
-
+function Poster(props) {
+  const { backgroundImage} = props;
 
   return (
-    <div style={{backgroundImage: `url("https://image.tmdb.org/t/p/original//8Y43POKjjKDGI9MH89NW0NAzzp8.jpg")`,height:"600px",backgroundSize:"100% 100%"}}>
 
-
-
-
-
-
+    <div
+      className="poster"
+      style={{ backgroundImage: `url(${backgroundImage})` }}
+    >
+        <h1 className='poster-title'>Movie name.</h1>
+        <h2 className='poster-description'>description</h2>
+        <div className='poster-buttons'>
+            <button className='poster-button play-button'>Play</button>
+            <button className='poster-button info-button'>More Info</button>
+        </div>
     </div>
   )
 }
