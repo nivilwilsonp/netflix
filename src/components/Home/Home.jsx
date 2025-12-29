@@ -1,37 +1,60 @@
-import React, { useEffect } from 'react'
-import { useState } from 'react'
-import Poster from '../Poster/Poster'
-import axios from 'axios'
-import { baseURL } from '../constants';
+import React, { useEffect, useState } from 'react';
+import Poster from '../Poster/Poster';
+import axios from 'axios';
+import { baseURL, trendingEndpoint } from '../constants';
+import HomeContext from './HomeContext';
+
+
+
+
+
 
 function Home() {
-  const [ImgUrl,setImageUrl]=useState("");
-  const[MovieData,setMovieData]=useState({});
-  useEffect(()=>{
-    
-  const url=`${baseURL}/api/trending`;
- axios.get(url).then(response => {
-  if(response.data.results.length>0){
-    
-let data=response.data.results[1];
-console.log("the data is = ",data.backdrop_path);
-setImageUrl(data.backdrop_path);
-setMovieData(data);
+   const[data,setData]=useState([]);
+function getTrendingMovies() {
+  const url = baseURL + trendingEndpoint;
+    axios.get(url)
+      .then((response) => {
+        const results = response?.data?.results ?? [];
+        console.log(results);
 
-  }else{
-    console.log("No trending movies found");
+        if (results.length > 0) {
+           console.log("getTrending Movies home:", typeof results); 
+           
+         setData(results);
+       
+         
+        } else {
+          console.log("No trending movies found");
+          
+        }
+      })
+      .catch((error) => {
+        console.error("There was an error!", error);
+      });
+}
+ 
+ 
+  useEffect(() => {
+   
+   
+      getTrendingMovies();
+   
     
-  }
-    
- }).catch(error => {
-    console.error('There was an error!', error)
- })   ;},[]);
+  }, []);
+
 
   return (
     <div>
-   {ImgUrl && <Poster path={ImgUrl} data={MovieData} />}
+    <HomeContext.Provider value={data}>
+      <Poster></Poster>
+    </HomeContext.Provider>
+                                                                                                                 
+   
+   
     </div>
   )
 }
 
 export default Home
+  

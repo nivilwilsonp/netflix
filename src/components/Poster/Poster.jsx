@@ -1,33 +1,72 @@
-import React from 'react';
+import React, { useContext,useState } from "react";
 import "./Poster.css";
-import axios from '../Axios';
+import axios from "../Axios";
 import "@fontsource/oswald/700.css";
 import "@fontsource/oswald/400.css";
-import { baseURL } from '../constants';
+import { baseURL, imageBaseURL } from "../constants";
+import HomeContext from "../Home/HomeContext";
 
-function Poster(props) {
-  
-  //const { path="/iN41Ccw4DctL8npfmYg1j5Tr1eb.jpg", size = "original" } = props;   
-    const { path,data, size = "w1280" } = props;   
-                                    
+function Poster() {
+  const trendingMovies = useContext(HomeContext);
+  let { path, size = "original" } = "";
+  let url = ""; 
+  const [id,setId]=useState(0);
+  if(typeof id ===undefined){
+    setId(0);
+  }
+  if (trendingMovies && trendingMovies.length > 0) {
+    console.log("data in poster:", trendingMovies);
+    path = trendingMovies[id].backdrop_path;
+    url = `${baseURL}/api/image?path=${path}&size=${size}`;
 
-  const url = `${baseURL}/api/image?path=${path}&size=${size}`;
-  
+    console.log("url", url);
+  }
 
   return (
-
-    <div
-      className="poster"
-      style={{ backgroundImage: `url(${url})`, backgroundSize: 'cover' }}
-    >
-        <h1 className='poster-title'>{data.title}.</h1>
-        <h2 className='poster-description'>{data.overview}</h2>
-        <div className='poster-buttons'>
-            <button className='poster-button play-button'>Play</button>
-            <button className='poster-button info-button'>More Info</button>
+    <div>
+      <div
+        className="banner"
+        style={{ backgroundImage: `url(${url})`}}
+      >
+        <h1 className="banner-title">
+          {trendingMovies && trendingMovies.length > 0
+            ? trendingMovies[id].title
+            : ""}
+          .
+        </h1>
+        <h2 className="banner-description">
+          {trendingMovies && trendingMovies.length > 0
+            ? trendingMovies[id].overview
+            : ""}
+        </h2>
+        <div className="banner-buttons">
+          <button className="banner-button play-button">Play</button>
+          <button className="banner-button info-button">More Info</button>
         </div>
+      </div>
+
+      <div className="posters-container">
+        {trendingMovies
+          ? trendingMovies.map((movie,index) => (
+              <img 
+                key={movie.id}
+                className="poster" onClick={()=>{
+                  setId(index);
+                }}
+                src={
+                  baseURL +
+                  imageBaseURL +
+                  "?path=" +
+                  movie.poster_path +
+                  "&size=w185"
+                }
+                alt="poster"
+              />
+            ))
+          : ""}
+      </div>
     </div>
-  )
+  );
 }
 
-export default Poster
+export default Poster;

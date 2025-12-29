@@ -1,14 +1,15 @@
-.poster{
+.banner{
     width:100%;
-    height:1080px;
-    background-size:contain;
+    height:800px;
+    background-size:cover;
  
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 0;
   
 }
 
-.poster-title {
+
+.banner-title {
 font-size: 5rem;
  padding: 300px 0 0 50px;
   color: white;
@@ -16,7 +17,7 @@ font-size: 5rem;
   font-weight: 800;
 }
 
-.poster-description {
+.banner-description {
   width: 30%;
   font-size: 1.3rem;
   padding: 10px 0 0 50px;
@@ -25,7 +26,7 @@ font-size: 5rem;
   font-weight: 200;
 }
 
-.poster-button {
+.banner-button {
     height: 50px;
     width: 150px;
     text-align: center;
@@ -42,8 +43,34 @@ font-size: 5rem;
 
 }
 
-.poster-buttons {
+.banner-buttons {
     padding: 10px 0 0 50px;
     display: flex;
     flex-direction: row;
 }
+
+.poster{
+height: fit-content;
+width: fit-content;
+display: inline-block;
+padding: 0px 3px;
+}
+
+.posters-container{
+  
+    padding:60px 50px 50px 50px;
+    background-color: black;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    
+
+   
+}
+
+.poster:hover{
+    transform: scale(1.5);
+    transition: all 0.2s;
+    z-index: 999;
+    cursor: pointer;
+} 

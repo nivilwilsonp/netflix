@@ -3,7 +3,7 @@ import Poster from '../Poster/Poster'
 
 function Shows() {
   return (
-    <div><Poster backgroundImage="/hello.jpg"></Poster></div>
+    <div><Poster></Poster></div>
   )
 }
 
