@@ -1,10 +1,10 @@
 const baseURL = "https://tmdb-backend-iu1z.onrender.com";
 const imageBaseURL = "/api/image";
 const trendingEndpoint = "/api/trending";
-const actionEndpoint = "/discover/movie?with_genres=28";
-const comedyEndpoint = "/discover/movie?with_genres=35";
-const horrorEndpoint = "/discover/movie?with_genres=27";
-const romanceEndpoint = "/discover/movie?with_genres=10749";
-const documentaryEndpoint = "/discover/movie?with_genres=99";
+const actionEndpoint = "/api/movies/action";
+const comedyEndpoint = "/api/movies/comedy";
+const horrorEndpoint = "/api/movies/horror";
+const romanceEndpoint = "/api/movies/romance";
+const documentaryEndpoint = "/api/movies/documentary";
 const genresEndpoint = "/genre/movie/list";
 export { baseURL , imageBaseURL , trendingEndpoint , actionEndpoint , comedyEndpoint , horrorEndpoint , romanceEndpoint , documentaryEndpoint , genresEndpoint  };

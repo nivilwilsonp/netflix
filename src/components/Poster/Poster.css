@@ -54,6 +54,7 @@ height: fit-content;
 width: fit-content;
 display: inline-block;
 padding: 0px 3px;
+border-radius: 9px;
 }
 
 .posters-container{
@@ -63,10 +64,23 @@ padding: 0px 3px;
     white-space: nowrap;
     overflow-x: auto;
     overflow-y: hidden;
+    color: white;
+    
     
 
    
 }
+.posters-container::-webkit-scrollbar {
+    display: none;
+}
+.posters-container h1{
+    font-size: 1.7rem;
+    margin-bottom:20px;
+    font-family: 'Oswald', sans-serif;
+  font-weight: 100;
+}
+
+
 
 .poster:hover{
     transform: scale(1.5);
