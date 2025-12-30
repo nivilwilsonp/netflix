@@ -3,6 +3,10 @@
 A Netflix-style web application built with **React** and **Vite**. This project demonstrates a modern front-end setup with responsive UI, routing, and API integration for movie/TV data.Built with React ⚛️ and JavaScript
 
 ---
+# Disclaimer
+This project is a **fan-made clone** for educational purposes only. 
+It is **not affiliated with or endorsed by Netflix**. 
+All trademarks, logos, and copyrighted material belong to their respective owners.
 
 ## Features
 
