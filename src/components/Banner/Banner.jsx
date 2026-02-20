@@ -19,7 +19,7 @@ function Banner() {
       const width = window.innerWidth;
 
       if (width < 640) {
-        setImageSize("w300");
+        setImageSize("w780");
       } else if (width < 1024) {
         setImageSize("w780");
       } else {
@@ -34,7 +34,7 @@ function Banner() {
 
   return (
     <div
-      className="h-75 sm:h-195 "
+      className="banner"
       style={{
         backgroundImage: `url(${url})`,
         backgroundRepeat: "no-repeat",

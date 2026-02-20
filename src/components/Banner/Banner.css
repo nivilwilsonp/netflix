@@ -1,1 +1,15 @@
 @import "tailwindcss";
+.banner {
+  @apply flex flex-col w-full h-[75vh] bg-cover bg-center bg-no-repeat justify-end p-4;
+}
+
+.banner-title {
+  @apply w-auto flex-wrap text-4xl p-0 my-2;
+}
+.banner-description {
+  @apply w-auto flex-wrap text-sm p-0 my-2;
+}
+
+.banner-buttons {
+  @apply p-0;
+}
